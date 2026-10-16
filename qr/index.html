@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kuppio QR poster</title>
+  <style>
+    :root { --pink: #EE4C6A; }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+           background: #f2f2f2; color: #111; display: flex; flex-direction: column; align-items: center; padding: 16px; }
+    .bar { width: 100%; max-width: 560px; display: flex; gap: 12px; align-items: center; margin-bottom: 16px; }
+    .bar p { flex: 1; margin: 0; font-size: 14px; color: #555; }
+    button { background: var(--pink); color: #fff; border: 0; border-radius: 999px; font-size: 16px;
+             font-weight: 700; padding: 12px 22px; cursor: pointer; }
+    .poster { width: 100%; max-width: 560px; aspect-ratio: 8.5 / 11; background: #fff; border-radius: 12px;
+              display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 6% 8%;
+              text-align: center; box-shadow: 0 2px 12px rgba(0,0,0,.08); }
+    .kicker { color: var(--pink); font-weight: 800; letter-spacing: 2px; font-size: 14px; }
+    h1 { font-size: 34px; margin: 10px 0 6px; line-height: 1.15; }
+    .sub { font-size: 18px; color: #444; margin: 0 0 4%; }
+    #qr { width: clamp(200px, 62vw, 340px); aspect-ratio: 1; flex-shrink: 0; }
+    #qr svg { width: 100% !important; height: 100% !important; display: block; }
+    .foot { margin-top: 4%; font-size: 15px; color: #444; }
+    .foot b { color: var(--pink); }
+    .missing { font-size: 18px; color: #555; }
+    @media print {
+      @page { size: letter; margin: 0; }
+      body { background: #fff; padding: 0; }
+      .bar { display: none; }
+      .poster { max-width: none; width: 100vw; height: 100vh; aspect-ratio: auto; border-radius: 0; box-shadow: none; }
+      #qr { width: 58vw; }
+      h1 { font-size: 44px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="bar">
+    <p>Print this page, or use Share → Print / Save as PDF.</p>
+    <button onclick="window.print()">Print</button>
+  </div>
+  <div class="poster">
+    <div class="kicker">ORDER AHEAD ON KUPPIO</div>
+    <h1 id="name">Loading…</h1>
+    <p class="sub">Scan to see the menu and order for pickup</p>
+    <div id="qr"></div>
+    <div class="foot">Open your camera and point it at the code · <b>Kuppio</b></div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js"></script>
+  <script src="../assets/shop.js"></script>
+  <script>
+    (async () => {
+      const K = window.KUPPIO;
+      const id = K.shopId();
+      let shop = null;
+      try { shop = id && (await K.loadShop(id)); } catch (e) { shop = null; }
+      const name = document.getElementById('name');
+      if (!shop) {
+        name.textContent = 'Shop not found';
+        document.getElementById('qr').innerHTML = '<p class="missing">This shop isn\'t on Kuppio right now.</p>';
+        return;
+      }
+      document.title = `${shop.name} · Kuppio QR poster`;
+      name.textContent = shop.name;
+      const qr = qrcode(0, 'M');
+      qr.addData(K.shareUrl(shop.id));
+      qr.make();
+      // createSvgTag's output is built from the QR matrix only, no shop text.
+      document.getElementById('qr').innerHTML = qr.createSvgTag(8, 2);
+    })();
+  </script>
+</body>
+</html>

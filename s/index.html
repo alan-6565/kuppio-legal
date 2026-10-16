@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kuppio</title>
+  <meta name="description" content="See the menu and order ahead on Kuppio.">
+  <style>
+    :root { --pink: #EE4C6A; --ink: #1A1A1A; --muted: #6B6B6B; --bg: #FFF8F6; --card: #FFFFFF; --line: #EFE4E1; }
+    @media (prefers-color-scheme: dark) {
+      :root { --ink: #F4F1F0; --muted: #A8A2A0; --bg: #121012; --card: #1E1B1E; --line: #2E2A2E; }
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+           background: var(--bg); color: var(--ink); min-height: 100vh; display: flex; justify-content: center; }
+    main { width: 100%; max-width: 440px; padding: 24px 16px 40px; }
+    .brand { font-weight: 800; color: var(--pink); letter-spacing: 0.5px; margin-bottom: 16px; }
+    .card { background: var(--card); border: 1px solid var(--line); border-radius: 20px; overflow: hidden; }
+    .photo { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; display: block; background: var(--line); }
+    .body { padding: 18px; }
+    h1 { margin: 0; font-size: 26px; line-height: 1.2; }
+    .meta { color: var(--muted); margin-top: 4px; font-size: 15px; }
+    .desc { margin: 12px 0 0; font-size: 15px; line-height: 1.45; }
+    .open { display: block; text-align: center; background: var(--pink); color: #fff; text-decoration: none;
+            font-weight: 700; font-size: 17px; padding: 15px; border-radius: 999px; margin-top: 18px; }
+    .note { color: var(--muted); font-size: 13px; text-align: center; margin-top: 12px; line-height: 1.4; }
+    .hidden { display: none; }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="brand">KUPPIO</div>
+    <div id="shop" class="card hidden">
+      <img id="photo" class="photo hidden" alt="">
+      <div class="body">
+        <h1 id="name"></h1>
+        <div id="meta" class="meta"></div>
+        <p id="desc" class="desc"></p>
+        <a id="open" class="open" href="#">Open in Kuppio</a>
+        <p class="note">See the menu and order ahead for pickup.<br>Don't have Kuppio yet? It's coming soon to the App Store and Google Play.</p>
+      </div>
+    </div>
+    <div id="missing" class="card hidden"><div class="body">
+      <h1>Shop not found</h1>
+      <p class="desc">This shop isn't on Kuppio right now. The link may be old, or the page may be paused.</p>
+    </div></div>
+    <p id="loading" class="note">Loading…</p>
+  </main>
+  <script src="../assets/shop.js"></script>
+  <script>
+    (async () => {
+      const K = window.KUPPIO;
+      const show = (id) => document.getElementById(id).classList.remove('hidden');
+      const id = K.shopId();
+      let shop = null;
+      try { shop = id && (await K.loadShop(id)); } catch (e) { shop = null; }
+      document.getElementById('loading').classList.add('hidden');
+      if (!shop) return show('missing');
+      // textContent only: shop text is never parsed as HTML.
+      document.title = `${shop.name} on Kuppio`;
+      document.getElementById('name').textContent = shop.name;
+      document.getElementById('meta').textContent = K.place(shop);
+      document.getElementById('desc').textContent = shop.description || '';
+      document.getElementById('open').href = K.appUrl(shop.id);
+      const photo = K.photo(shop);
+      if (photo) { const img = document.getElementById('photo'); img.src = photo; show('photo'); }
+      show('shop');
+    })();
+  </script>
+</body>
+</html>
