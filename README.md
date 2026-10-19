@@ -4,6 +4,7 @@ Terms of Service and Privacy Policy for the Kuppio app, published with GitHub Pa
 
 - https://alan-6565.github.io/kuppio-legal/terms
 - https://alan-6565.github.io/kuppio-legal/privacy
+- https://alan-6565.github.io/kuppio-legal/seller-agreement
 
 Shop pages for the app's share links and QR codes (Hidden-Gem #117):
 
