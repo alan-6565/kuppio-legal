@@ -8,6 +8,7 @@ Discover the small food spots that get overlooked — home bakers, pop-ups, food
 
 - [Privacy Policy](privacy)
 - [Terms of Service](terms)
+- [Seller Agreement](seller-agreement)
 
 Contact: jahiralancrisostomogarcia@gmail.com
 
