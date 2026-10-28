@@ -5,7 +5,7 @@ permalink: /terms
 
 # Terms of Service
 
-**Effective date:** September 26, 2026 · **Last updated:** October 5, 2026
+**Effective date:** September 26, 2026 · **Last updated:** October 27, 2026
 
 These Terms of Service ("Terms") govern your use of the Kuppio mobile app ("Kuppio," "we," "us," or "our"). Kuppio is owned and operated by Jahir Crisostomo. By creating an account or using the app, you agree to these Terms.
 
@@ -21,13 +21,14 @@ You're responsible for maintaining the security of your account and for all acti
 
 Kuppio lets you post reviews, photos, videos, and comments, and create or claim business listings. You retain ownership of the content you post, but you grant Kuppio a license to host, display, and distribute it within the app for the purpose of operating the service.
 
-You agree not to post content that is:
+**Kuppio has zero tolerance for objectionable content and abusive users.** You agree not to post content that is:
 - Illegal, fraudulent, or misleading
-- Harassing, hateful, or abusive toward another person
+- Harassing, hateful, threatening, or abusive toward another person or group
+- Sexually explicit, or violent and graphic
 - Spam, or unrelated to the purpose of the app
 - Infringing on someone else's intellectual property or privacy
 
-We may remove content or suspend accounts that violate these Terms, and you can report content or block users you don't want to interact with directly in the app.
+You can report any post, review, comment, or listing, and block any user, directly in the app. We review reports within 24 hours. When content breaks these Terms, we remove it and suspend or remove the account that posted it.
 
 ## 4. Ownership of Kuppio
 
@@ -51,7 +52,7 @@ Kuppio uses your device's location, with your permission, to show nearby spots a
 
 ## 8. Termination
 
-You may delete your account at any time from Settings → Delete account. We may suspend or terminate your access if you violate these Terms.
+You may delete your account at any time from Settings → Delete account. We may suspend or terminate your access if you violate these Terms, including stopping a suspended account from posting.
 
 ## 9. Disclaimers
 
