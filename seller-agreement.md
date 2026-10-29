@@ -5,7 +5,7 @@ permalink: /seller-agreement
 
 # Seller Agreement
 
-**Version:** October 19, 2026
+**Version:** November 28, 2026 (announced October 29, 2026; the [previous version](https://github.com/alan-6565/kuppio-legal/blob/f1a1117/seller-agreement.md) applies until then)
 
 This Seller Agreement ("Agreement") applies to anyone who lists a business on the Kuppio mobile app ("Kuppio," "we," "us," or "our") and takes orders through it ("you," the "Seller"). Kuppio is owned and operated by Jahir Crisostomo. You accept this Agreement when you apply to list a new business or claim an existing listing. It adds to the [Terms of Service](terms) and [Privacy Policy](privacy), which also apply to you.
 
@@ -13,18 +13,35 @@ This Seller Agreement ("Agreement") applies to anyone who lists a business on th
 
 You must own the business you list or be authorized to act for it. You're responsible for keeping your listing accurate: name, location or service area, hours, menu, prices, photos, ingredients, and whether items are available. Kuppio reviews every application, but approval doesn't mean we've checked or endorse your products.
 
-## 2. Fees
+## 2. Getting Paid and Fees
 
-Kuppio doesn't charge Sellers any fees right now. If we start charging fees, we'll tell you at least 30 days before they take effect, and they'll only apply to orders placed after that date. You can stop selling on Kuppio at any time.
+You choose how customers pay for your orders: **at pickup**, **in the app**, or **either**. You can change this at any time.
 
-## 3. Orders, Payment and Refunds
+**Paying at pickup.** The customer pays you directly when they pick up. Kuppio doesn't charge you anything for these orders.
 
-Orders placed through Kuppio are pay-at-pickup. Kuppio sends the order to you, but does not process payment; the customer pays you directly. That means:
+**Paying in the app.** To take payments in the app, you connect a Stripe account. Payment processing for Sellers on Kuppio is provided by Stripe and is subject to the [Stripe Connected Account Agreement](https://stripe.com/connect-account/legal/full), which includes the [Stripe Terms of Service](https://stripe.com/legal/ssa) (together, the "Stripe Services Agreement"). By taking payments in the app, you agree to the Stripe Services Agreement, as Stripe may update it from time to time. As a condition of Kuppio enabling payment processing services through Stripe, you agree to give Kuppio accurate and complete information about you and your business, and you authorize Kuppio to share it and transaction information related to your use of the payment processing services provided by Stripe.
 
-- You set your prices, and you collect payment.
-- You decide whether to accept or decline an order, and you're responsible for having accepted orders ready at the pickup time you confirmed.
-- Refunds, exchanges and order problems are between you and the customer. Please handle them fairly and promptly.
-- If you can't fill an order you accepted, cancel or decline it in the app as soon as you can so the customer knows.
+For each order paid in the app:
+
+- **Kuppio's fee is 5% of the menu total** (the price of the items ordered). It's taken from the payment before it reaches you.
+- **Tips are 100% yours.** Kuppio takes no fee on tips.
+- **Card processing is paid by the customer.** The customer pays a separate card-processing amount that covers Stripe's fee, so it isn't taken from your share.
+- **You receive** the menu total plus any tip, minus Kuppio's 5%. Stripe pays this out to your bank account on its payout schedule.
+
+Example: a $10.00 order with a $1.50 tip. The customer pays $12.16 ($10.00 + $1.50 tip + $0.66 card processing). You receive $11.00 ($10.00 + $1.50 − $0.50 Kuppio fee).
+
+We'll tell you at least 30 days before we change our fees, and any change will only apply to orders placed after it takes effect. You can stop taking payments in the app, or stop selling on Kuppio, at any time.
+
+## 3. Orders, Declines and Refunds
+
+You set your prices and decide whether to accept or decline an order. Once you accept an order, you're responsible for having it ready at the pickup time the customer chose.
+
+- **Declining:** you can decline an order in the first 5 minutes after you receive it, before you accept it. For an order paid in the app, you receive it once it's paid. After that, or once you accept it, the order is yours to make.
+- **Customer cancellations:** a customer can cancel an order until you accept it. If your shop auto-accepts orders, they can cancel in the first 5 minutes.
+- **Orders nobody answers:** if you don't accept an order within 30 minutes of receiving it, Kuppio cancels it and lets you and the customer know.
+- **Refunds for orders paid in the app:** when an order is declined, cancelled, or cancelled for not being accepted, the customer is refunded in full, Kuppio's fee is returned, and nothing is paid out to you for that order. Stripe may keep its card-processing fee on a refunded payment; that amount is taken from your Stripe balance.
+- **Other problems** (a wrong item, a quality complaint) are between you and the customer. Please handle them fairly and promptly. If you give a refund for an order paid in the app, issue it from your Stripe account.
+- **Disputes and chargebacks** on payments made in the app are handled by Stripe under the Stripe Services Agreement. Please respond to them promptly.
 
 You're responsible for any taxes, business licenses and record-keeping your sales require.
 
