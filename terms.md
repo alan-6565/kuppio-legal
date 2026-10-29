@@ -5,7 +5,7 @@ permalink: /terms
 
 # Terms of Service
 
-**Effective date:** September 26, 2026 · **Last updated:** October 27, 2026
+**Effective date:** September 26, 2026 · **Last updated:** October 29, 2026
 
 These Terms of Service ("Terms") govern your use of the Kuppio mobile app ("Kuppio," "we," "us," or "our"). Kuppio is owned and operated by Jahir Crisostomo. By creating an account or using the app, you agree to these Terms.
 
@@ -44,29 +44,46 @@ Anyone can submit a claim to an existing business listing or submit a new busine
 
 ## 6. Orders and Payments
 
-Preorders placed through Kuppio are currently pay-at-pickup: the app sends your order ahead to the business, but does not process payment. You pay the business directly at pickup. Kuppio is not a party to that payment transaction and is not responsible for pricing, availability, or fulfillment of orders — those are between you and the business.
+When you order ahead through Kuppio, the app sends your order to the business. Depending on the business, you pay at pickup, in the app, or either.
 
-## 7. Location Services
+**Paying at pickup.** You pay the business directly when you pick up.
+
+**Paying in the app.** Payments are processed by Stripe on behalf of the business you're ordering from, and your card statement shows that business's name. You pay the menu price, any tip you choose, and a card-processing fee, all shown before you pay. Tips go entirely to the business.
+
+**Cancellations and refunds.**
+- You can cancel an order until the business accepts it. If the business accepts orders automatically, you can cancel in the first 5 minutes.
+- A business can decline an order in the first 5 minutes after it receives it, before accepting it.
+- If a business doesn't accept your order within 30 minutes, it's cancelled automatically.
+- If an order you paid for in the app is cancelled or declined, you're refunded in full, including the card-processing fee. Refunds usually take 5–10 business days to reach your account.
+- For other problems with an order (a wrong item, quality), contact the business first. Businesses handle these refunds themselves.
+
+The business you order from is the seller. It's responsible for its prices, the food, and having your order ready; Kuppio provides the app and isn't responsible for fulfillment of orders. Disputes about a card payment can also be raised with your card issuer.
+
+## 7. Messages
+
+You can send direct messages to other users and businesses. The rules for content in section 3 apply to messages too. You can block anyone to stop them messaging you, and report any message.
+
+## 8. Location Services
 
 Kuppio uses your device's location, with your permission, to show nearby spots and distances. You can disable location access at any time in your device settings.
 
-## 8. Termination
+## 9. Termination
 
 You may delete your account at any time from Settings → Delete account. We may suspend or terminate your access if you violate these Terms, including stopping a suspended account from posting.
 
-## 9. Disclaimers
+## 10. Disclaimers
 
 Kuppio is provided "as is." We don't guarantee the accuracy of business information, reviews, or content posted by users, and we're not responsible for your experience at any listed business. Use the app at your own discretion.
 
-## 10. Limitation of Liability
+## 11. Limitation of Liability
 
 To the fullest extent permitted by law, Kuppio is not liable for indirect, incidental, or consequential damages arising from your use of the app.
 
-## 11. Changes to These Terms
+## 12. Changes to These Terms
 
 We may update these Terms from time to time. Continued use of the app after changes take effect means you accept the updated Terms.
 
-## 12. Contact Us
+## 13. Contact Us
 
 Questions about these Terms can be sent to: jahiralancrisostomogarcia@gmail.com
 
